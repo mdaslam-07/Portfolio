@@ -2,7 +2,7 @@
 // and set `image` below to that import, e.g. image: internCert1
 import robCert from "../assets/internships/robotic-cert.jpeg";
 import embCert from "../assets/internships/embed-cert.jpeg";
-import apexCert from "../assets/internships/apex-cert.jpg";
+import apexCert from "../assets/internships/apex-cert.jpeg";
 
 export const internships = [
   {
