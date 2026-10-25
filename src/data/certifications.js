@@ -8,9 +8,9 @@
 // you add a real `image` (imported file) or `link` (verified URL).
 import nptelCert from "../assets/certificates/nptel-hci.jpeg";
 import ociCert from "../assets/certificates/oci-ai.jpeg";
-import dataScienceCert from "../assets/certificates/data-science.jpg";
-import aiMlCert from "../assets/certificates/ai-ml.jpg";
-import cloudCert from "../assets/certificates/cloud.jpg";
+import dataScienceCert from "../assets/certificates/data-science.JPG";
+import aiMlCert from "../assets/certificates/ai-ml.JPG";
+import cloudCert from "../assets/certificates/cloud.JPG";
 
 export const certifications = [
   {
