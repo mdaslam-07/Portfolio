@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Eye } from "lucide-react";
+import { Eye, Gem, ExternalLink } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import CertificateModal from "./CertificateModal";
 import { achievements } from "../data/achievements";
+
+const ICONS = { gem: Gem };
 
 export default function Achievements() {
   const [selected, setSelected] = useState(null);
@@ -27,9 +29,30 @@ export default function Achievements() {
               >
                 <span className="absolute -left-8 md:-left-10 top-1.5 w-[15px] h-[15px] rounded-full bg-ink border-2 border-ember" />
                 <p className="font-mono text-xs text-ember mb-1">{a.org}</p>
-                <h3 className="font-display text-xl md:text-2xl font-semibold text-paper mb-1.5">{a.title}</h3>
+                <h3 className="flex items-center gap-2.5 font-display text-xl md:text-2xl font-semibold text-paper mb-1.5">
+                  {a.badgeImage ? (
+                    <img src={a.badgeImage} alt="" className="w-7 h-7 object-contain flex-shrink-0" />
+                  ) : (
+                    a.icon && ICONS[a.icon] && (() => {
+                      const Icon = ICONS[a.icon];
+                      return <Icon size={22} className="text-ember flex-shrink-0" aria-hidden="true" />;
+                    })()
+                  )}
+                  {a.title}
+                </h3>
                 <p className="text-paper-dim text-sm leading-relaxed max-w-lg">{a.detail}</p>
-                <div className="flex items-center gap-4 mt-3">
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-3">
+                  {a.profileUrl && (
+                    <a
+                      href={a.profileUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 font-mono text-[11px] text-paper-dim hover:text-ember transition-colors"
+                    >
+                      <ExternalLink size={12} />
+                      View CodeChef Profile
+                    </a>
+                  )}
                   {a.certificateImage && (
                     <button
                       onClick={() =>

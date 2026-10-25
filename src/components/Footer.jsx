@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="border-t border-surface-border">
       <div className="max-w-content mx-auto px-6 md:px-10 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="text-center sm:text-left">
-          <p className="font-display text-base font-semibold text-paper">Mohamed Aslam</p>
+          <p className="font-display text-base font-semibold text-paper">Mohamed Aslam H</p>
           <p className="text-paper-faint text-xs mt-1">Computer Science &amp; Engineering | IoT</p>
         </div>
 

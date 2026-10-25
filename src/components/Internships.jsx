@@ -35,31 +35,66 @@ export default function Internships() {
               <h3 className="font-display text-lg md:text-xl font-semibold text-paper mb-1">{it.role}</h3>
               <p className="font-mono text-xs text-ember mb-2">{it.company}</p>
 
-              <p className="flex items-center gap-1.5 text-paper-faint text-xs mb-4">
-                <Calendar size={12} />
-                {it.duration}
-              </p>
+              <div className="flex items-start gap-1.5 text-paper-faint text-xs mb-4">
+                <Calendar size={12} className="mt-0.5 flex-shrink-0" />
+                <div className="space-y-1">
+                  {(Array.isArray(it.duration) ? it.duration : [it.duration]).map((line) => (
+                    <p key={line}>{line}</p>
+                  ))}
+                </div>
+              </div>
 
               <p className="text-paper-dim text-sm leading-relaxed mb-4">{it.description}</p>
 
-              {it.image && (
-                <button
-                  onClick={() => setSelected(it)}
-                  className="inline-flex items-center gap-1.5 font-mono text-[11px] text-paper-dim hover:text-ember transition-colors"
-                >
-                  <Eye size={12} />
-                  View Certificate
-                </button>
-              )}
+              <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+                {it.certificates
+                  ? it.certificates.map((c) =>
+                      c.image ? (
+                        <button
+                          key={c.id}
+                          onClick={() =>
+                            setSelected({
+                              title: it.role,
+                              platform: `${it.company} — ${c.name}`,
+                              image: c.image,
+                            })
+                          }
+                          className="inline-flex items-center gap-1.5 font-mono text-[11px] text-paper-dim hover:text-ember transition-colors"
+                        >
+                          <Eye size={12} />
+                          {c.label}
+                        </button>
+                      ) : (
+                        <button
+                          key={c.id}
+                          type="button"
+                          disabled
+                          title="Certificate file not added yet"
+                          className="inline-flex items-center gap-1.5 font-mono text-[11px] text-paper-faint opacity-60 cursor-not-allowed"
+                        >
+                          <Eye size={12} />
+                          {c.label}
+                        </button>
+                      )
+                    )
+                  : it.image && (
+                      <button
+                        onClick={() =>
+                          setSelected({ title: it.role, platform: it.company, image: it.image })
+                        }
+                        className="inline-flex items-center gap-1.5 font-mono text-[11px] text-paper-dim hover:text-ember transition-colors"
+                      >
+                        <Eye size={12} />
+                        View Certificate
+                      </button>
+                    )}
+              </div>
             </motion.div>
           ))}
         </div>
       </div>
 
-      <CertificateModal
-        cert={selected ? { title: selected.role, platform: selected.company, image: selected.image } : null}
-        onClose={() => setSelected(null)}
-      />
+      <CertificateModal cert={selected} onClose={() => setSelected(null)} />
     </section>
   );
 }

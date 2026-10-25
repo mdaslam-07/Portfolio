@@ -16,7 +16,7 @@ export default function Skills() {
     <section id="skills" className="py-24 md:py-32 border-t border-surface-border">
       <div className="max-w-content mx-auto px-6 md:px-10">
         <SectionHeading
-          index="02"
+          index="03"
           label="Skills"
           title="What I Work With"
           description="Technologies and tools I use to turn ideas into practical solutions and solve real-world problems."

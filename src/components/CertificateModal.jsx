@@ -1,15 +1,16 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import { useEffect } from "react";
+import { lockScroll } from "../lib/scrollLock";
 
 export default function CertificateModal({ cert, onClose }) {
   useEffect(() => {
     const onKey = (e) => e.key === "Escape" && onClose();
     document.addEventListener("keydown", onKey);
-    document.body.style.overflow = cert ? "hidden" : "";
+    const unlock = cert ? lockScroll() : null;
     return () => {
       document.removeEventListener("keydown", onKey);
-      document.body.style.overflow = "";
+      if (unlock) unlock();
     };
   }, [cert, onClose]);
 

@@ -18,7 +18,7 @@ export default function Contact() {
     <section id="contact" className="py-24 md:py-32 border-t border-surface-border">
       <div className="max-w-content mx-auto px-6 md:px-10">
         <SectionHeading
-          index="07"
+          index="08"
           label="Contact"
           align="center"
           title="Let's Connect"

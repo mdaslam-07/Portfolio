@@ -93,19 +93,22 @@ export default function Hero() {
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
           className="relative mx-auto w-full max-w-[340px] lg:max-w-none"
         >
-          <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-surface-border bg-surface">
-            {/* Replace this block with: <img src={yourPhoto} alt="Mohamed Aslam" className="w-full h-full object-cover" /> */}
-            <img src={myPhoto} alt="Mohamed Aslam H" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 ring-1 ring-inset ring-white/5" />
+          <div className="relative rounded-2xl border border-surface-border bg-surface px-6 py-10 sm:py-12 flex flex-col items-center text-center shadow-lg">
+            <div className="w-44 h-44 sm:w-52 sm:h-52 lg:w-60 lg:h-60 rounded-full overflow-hidden border-2 border-ember/60 ring-4 ring-ember/10 bg-surface-raised">
+              <img
+                src={myPhoto}
+                alt="Mohamed Aslam"
+                className="w-full h-full object-cover object-[50%_18%]"
+              />
+            </div>
+            <p className="font-display text-lg font-semibold text-paper mt-7">Learn. Build. Innovate.</p>
+            <p className="font-mono text-[11px] text-paper-dim mt-2">Computer Science &amp; Engineering</p>
           </div>
 
           {/* corner brackets */}
           <span className="absolute -top-3 -left-3 w-8 h-8 border-t-2 border-l-2 border-ember/70 rounded-tl-md" />
           <span className="absolute -bottom-3 -right-3 w-8 h-8 border-b-2 border-r-2 border-ember/70 rounded-br-md" />
 
-          <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-surface border border-surface-border rounded-full px-5 py-2 font-mono text-[11px] text-paper-dim whitespace-nowrap shadow-lg">
-            Learn. Build. Innovate.
-          </div>
         </motion.div>
       </div>
     </section>

@@ -6,11 +6,12 @@ import { GithubIcon, LinkedinIcon } from "./Icons";
 const LINKS = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
+  { href: "#education", label: "Education" },
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
-  { href: "#certifications", label: "Certifications" },
   { href: "#internships", label: "Internships" },
   { href: "#achievements", label: "Achievements" },
+  { href: "#certifications", label: "Certifications" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -47,7 +48,7 @@ export default function Navbar() {
     >
       <nav className="max-w-content mx-auto px-6 md:px-10 h-16 md:h-20 flex items-center justify-between">
         <a href="#home" className="font-display text-lg md:text-xl font-semibold tracking-tight text-paper">
-          Mohamed Aslam
+          Mohamed Aslam H
         </a>
 
         <ul className="hidden lg:flex items-center gap-8">
