@@ -61,7 +61,7 @@ export default function Achievements() {
                       className="inline-flex items-center gap-1.5 font-mono text-[11px] text-paper-dim hover:text-ember transition-colors"
                     >
                       <Eye size={12} />
-                      View Certificate
+                      {a.certificateLabel || "View Certificate"}
                     </button>
                   )}
                   {a.proofImage && (

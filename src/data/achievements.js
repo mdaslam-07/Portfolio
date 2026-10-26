@@ -8,6 +8,7 @@ import paperCert from "../assets/achievements/paper-1st-cert.jpeg";
 import paperProof from "../assets/achievements/paper-1st-proof.jpeg";
 import icecisCert from "../assets/achievements/icecis.jpeg";
 import codechefBadgeCert from "../assets/achievements/codechef-diamond.jpg";
+import ciscoBadge from "../assets/achievements/cisco-junior-cyber-badge.jpeg";
 
 export const achievements = [
   {
@@ -37,6 +38,16 @@ export const achievements = [
     // Add your CodeChef profile URL here to show a "View CodeChef Profile" link.
     profileUrl: null,
     certificateImage: codechefBadgeCert,
+    certificateLabel: "View Badge",
+    proofImage: null,
+  },
+    {
+    id: "cisco-junior-cyber-analyst",
+    title: "Junior Cybersecurity Analyst Career Path",
+    org: "Cisco Networking Academy",
+    detail: "Achieved the Cisco Networking Academy Verified badge for the Junior Cybersecurity Analyst Career Path.",
+    certificateImage: ciscoBadge,
+    certificateLabel: "View Badge",
     proofImage: null,
   },
 ];

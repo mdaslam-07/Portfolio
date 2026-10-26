@@ -102,7 +102,7 @@ export default function Hero() {
               />
             </div>
             <p className="font-display text-lg font-semibold text-paper mt-7">Learn. Build. Innovate.</p>
-            <p className="font-mono text-[11px] text-paper-dim mt-2">Computer Science &amp; Engineering</p>
+            <p className="font-mono text-[11px] text-paper-dim mt-2">Exploring ideas and building innovative solutions through technology.</p>
           </div>
 
           {/* corner brackets */}

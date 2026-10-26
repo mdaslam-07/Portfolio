@@ -11,6 +11,7 @@ import ociCert from "../assets/certificates/oci-ai.jpeg";
 import dataScienceCert from "../assets/certificates/data-science.JPG";
 import aiMlCert from "../assets/certificates/ai-ml.JPG";
 import cloudCert from "../assets/certificates/cloud.JPG";
+import ciscoEssentialsCert from "../assets/certificates/cisco-cybersecurity-essentials.jpeg";
 
 export const certifications = [
   {
@@ -60,5 +61,13 @@ export const certifications = [
     image: cloudCert,
     link: null,
     pendingCertificate: true,
+  },
+    {
+    id: "cybersecurity-essentials",
+    title: "Cybersecurity Essentials",
+    platform: "Cisco Networking Academy",
+    issuer: "EdCreate Foundation",
+    image: ciscoEssentialsCert,
+    link: null,
   },
 ];
