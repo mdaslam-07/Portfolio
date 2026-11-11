@@ -76,7 +76,6 @@ export const certifications = [
     title: "Database Solutions Expert",
     platform: "Wipro TalentNext",
     issuer: "Wipro Limited",
-    issueDate: "July – October 2026",
     credentialId: "TNext-SE-2026-DB_262290159",
     image: wiproDbCert,
     link: null,
