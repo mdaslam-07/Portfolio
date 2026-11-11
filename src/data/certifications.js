@@ -12,6 +12,7 @@ import dataScienceCert from "../assets/certificates/data-science.JPG";
 import aiMlCert from "../assets/certificates/ai-ml.JPG";
 import cloudCert from "../assets/certificates/cloud.JPG";
 import ciscoEssentialsCert from "../assets/certificates/cisco-cybersecurity-essentials.jpeg";
+import wiproDbCert from "../assets/certificates/wipro-database-solutions-expert.jpeg";
 
 export const certifications = [
   {
@@ -68,6 +69,16 @@ export const certifications = [
     platform: "Cisco Networking Academy",
     issuer: "EdCreate Foundation",
     image: ciscoEssentialsCert,
+    link: null,
+  },
+    {
+    id: "database-solutions-expert",
+    title: "Database Solutions Expert",
+    platform: "Wipro TalentNext",
+    issuer: "Wipro Limited",
+    issueDate: "July – October 2026",
+    credentialId: "TNext-SE-2026-DB_262290159",
+    image: wiproDbCert,
     link: null,
   },
 ];
