@@ -13,8 +13,8 @@ import aiMlCert from "../assets/certificates/ai-ml.JPG";
 import cloudCert from "../assets/certificates/cloud.JPG";
 import ciscoEssentialsCert from "../assets/certificates/cisco-cybersecurity-essentials.jpeg";
 import wiproDbCert from "../assets/certificates/wipro-database-solutions-expert.jpeg";
-import aiMlGoldCert from "../assets/certificates/ai-ml-gold.JPEG";
-import cloudGoldCert from "../assets/certificates/cloud-gold.JPEG";
+import aiMlGoldCert from "../assets/certificates/ai-ml-gold.jpeg";
+import cloudGoldCert from "../assets/certificates/cloud-gold.jpeg";
 
 export const certifications = [
   {
