@@ -19,11 +19,19 @@ export const skillGroups = [
     category: "IoT / Embedded",
     items: ["Arduino", "Embedded Systems", "Sensors", "Robotics"],
   },
+   {
+    category: "Data Visualization Tools",
+    items: ["Power BI", "Tableau"],
+  },
+  {
+    category: "Tools / Platforms",
+    items: ["Git", "GitHub", "Visual Studio Code (VS Code)", "Vercel"],
+  },
 ];
 
 export const currentlyLearning = [
-  "Advanced SQL",
-  "PL/SQL",
-  "Machine Learning Concepts",
-  "Data Structures",
+  "Kotlin",
+  "PostgreSQL",
+  "Advanced Java",
+  "MongoDB",
 ];

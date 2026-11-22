@@ -5,9 +5,11 @@ import SectionHeading from "./SectionHeading";
 import CertificateModal from "./CertificateModal";
 import CodeChefCard from "./CodeChefCard";
 import { certifications } from "../data/certifications";
+import CertificateChooser from "./CertificateChooser";
 
 export default function Certifications() {
   const [selected, setSelected] = useState(null);
+  const [chooser, setChooser] = useState(null);
 
   return (
     <section id="certifications" className="py-24 md:py-32 border-t border-surface-border">
@@ -47,11 +49,22 @@ export default function Certifications() {
               {cert.issuer && (
                 <p className="font-mono text-[11px] text-paper-faint mt-1">Issued by {cert.issuer}</p>
               )}
+              {cert.achievement && (
+                <p className="font-mono text-[11px] text-paper-faint mt-1">Achievement: {cert.achievement}</p>
+              )}
               {cert.issueDate && (
                 <p className="font-mono text-[11px] text-paper-faint mt-1">Issued {cert.issueDate}</p>
               )}
               <div className="mt-3">
-                {cert.image ? (
+                {cert.certificates ? (
+                <button
+                onClick={() => setChooser(cert)}
+                className="inline-flex items-center gap-1.5 font-mono text-[11px] text-paper-dim hover:text-ember transition-colors"
+                >
+                <Eye size={12} />
+                View Certificates
+                </button>
+                ) : cert.image ? (
                   <button
                     onClick={() => setSelected(cert)}
                     className="inline-flex items-center gap-1.5 font-mono text-[11px] text-paper-dim hover:text-ember transition-colors"
@@ -88,6 +101,7 @@ export default function Certifications() {
       </div>
 
       <CertificateModal cert={selected} onClose={() => setSelected(null)} />
+      <CertificateChooser cert={chooser} onClose={() => setChooser(null)} />
     </section>
   );
 }

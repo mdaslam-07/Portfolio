@@ -13,6 +13,8 @@ import aiMlCert from "../assets/certificates/ai-ml.JPG";
 import cloudCert from "../assets/certificates/cloud.JPG";
 import ciscoEssentialsCert from "../assets/certificates/cisco-cybersecurity-essentials.jpeg";
 import wiproDbCert from "../assets/certificates/wipro-database-solutions-expert.jpeg";
+import aiMlGoldCert from "../assets/certificates/ai-ml-gold.JPEG";
+import cloudGoldCert from "../assets/certificates/cloud-gold.JPEG";
 
 export const certifications = [
   {
@@ -45,23 +47,29 @@ export const certifications = [
     link: null,
     pendingCertificate: true,
   },
-  {
+{
     id: "ai-ml-futureskills",
     title: "Artificial Intelligence & Machine Learning (AI/ML)",
     platform: "FutureSkills Prime",
     issuer: "NASSCOM IT-ITeS SSC",
-    image: aiMlCert,
+    achievement: "Gold Category",
+    certificates: [
+      { id: "course", label: "View Course Certificate", name: "Course Completion Certificate", image: aiMlCert },
+      { id: "gold", label: "View Gold Certificate", name: "Gold Category Certificate", image: aiMlGoldCert },
+    ],
     link: null,
-    pendingCertificate: true,
   },
-  {
+   {
     id: "cloud-computing-futureskills",
     title: "Cloud Computing Engineering (Azure / AWS)",
     platform: "FutureSkills Prime",
     issuer: "NASSCOM IT-ITeS SSC",
-    image: cloudCert,
+    achievement: "Gold Category",
+    certificates: [
+      { id: "course", label: "View Course Certificate", name: "Course Completion Certificate", image: cloudCert },
+      { id: "gold", label: "View Gold Certificate", name: "Gold Category Certificate", image: cloudGoldCert },
+    ],
     link: null,
-    pendingCertificate: true,
   },
     {
     id: "cybersecurity-essentials",
