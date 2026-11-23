@@ -15,6 +15,7 @@ import ciscoEssentialsCert from "../assets/certificates/cisco-cybersecurity-esse
 import wiproDbCert from "../assets/certificates/wipro-database-solutions-expert.jpeg";
 import aiMlGoldCert from "../assets/certificates/ai-ml-gold.jpeg";
 import cloudGoldCert from "../assets/certificates/cloud-gold.jpeg";
+import deloitteCert from "../assets/certificates/deloitte-data-analytics.JPEG";
 
 export const certifications = [
   {
@@ -86,6 +87,15 @@ export const certifications = [
     issuer: "Wipro Limited",
     credentialId: "TNext-SE-2026-DB_262290159",
     image: wiproDbCert,
+    link: null,
+  },
+  {
+    id: "deloitte-data-analytics-simulation",
+    title: "Data Analytics Job Simulation",
+    platform: "Forage",
+    issuer: "Deloitte",
+    description: "Completed practical tasks in Data Analysis and Forensic Technology.",
+    image: deloitteCert,
     link: null,
   },
 ];
