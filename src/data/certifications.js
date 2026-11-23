@@ -15,7 +15,7 @@ import ciscoEssentialsCert from "../assets/certificates/cisco-cybersecurity-esse
 import wiproDbCert from "../assets/certificates/wipro-database-solutions-expert.jpeg";
 import aiMlGoldCert from "../assets/certificates/ai-ml-gold.jpeg";
 import cloudGoldCert from "../assets/certificates/cloud-gold.jpeg";
-import deloitteCert from "../assets/certificates/deloitte-data-analytics.JPEG";
+import deloitteCert from "../assets/certificates/deloitte-data-analytics.jpeg";
 
 export const certifications = [
   {
